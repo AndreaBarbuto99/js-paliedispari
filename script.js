@@ -3,7 +3,7 @@
 
 let userWord = prompt("Inserisci una parola");
 
-console.log(wordIsPali(userWord));
+console.log(stringIsPali(userWord));
 
 // /*L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -13,6 +13,7 @@ console.log(wordIsPali(userWord));
 
 
 const userPD = prompt("La somma dei numeri deve essere pari o dispari?");
+console.log(userPD);
 let userNum = 0;
 let sumNum;
 
@@ -50,33 +51,36 @@ console.log(isOddEven(sumNum, userPD));
 
 // FUNZIONI
 
-function wordIsPali (string)
+function stringIsPali (string)
 {
     string = string.toLowerCase();
     let toArray = string.split("");
     console.log(toArray);
     toArray = toArray.reverse().join("");
     console.log(toArray);
+    let result;
     if (toArray === string)
     {
-        return "La parola scelta è palindroma";
+        return result = "La parola scelta è palindroma";
     }
     
     else 
     {
-        return "La parola scelta non è palindroma";
+        return result = "La parola scelta non è palindroma";
     }
     console.log(toArray);
 }
 
 function isOddEven (sum, oddEven) {
+    let result;
     if (sum % 2 === 0 && oddEven === "pari"){
-        return "Hai vinto";
+        return result = "Hai vinto";
     }
     else if(sum % 2 !== 0 && oddEven === "dispari"){
-        return "Hai vinto";
+        return result = "Hai vinto";
     }
     else {
-        return "Hai perso";
+        return result = "Hai perso";
     }
 }
+
